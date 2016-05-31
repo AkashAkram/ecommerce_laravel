@@ -6,9 +6,13 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\Category;
+
+use App\Product;
+
 class ShopController extends Controller
 {
-     public function __construct()
+    public function __construct()
     {
         
     }
@@ -20,6 +24,19 @@ class ShopController extends Controller
      */
     public function index()
     {
+        $categories = Category::all();
+        
+        return view('shop.index',compact('categories'));
+    }
+
+    public function category_index($id)
+    {
         return view('shop.index');
     }
+    
+    public function category_all($id)
+    {
+        return view('shop.all');
+    }
+
 }

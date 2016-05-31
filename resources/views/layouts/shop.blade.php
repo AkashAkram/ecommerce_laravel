@@ -6,6 +6,7 @@
     <link href="../css/style.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="../css/slider.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="../css/app.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../css/akash.css" rel="stylesheet" type="text/css" media="all"/>
     @yield('style')
 
     <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script> 

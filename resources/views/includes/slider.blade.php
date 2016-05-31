@@ -1,51 +1,43 @@
-                         <div class="slider">                        
-                             <div id="slider">
-                                <div id="mover">
-                                    <div id="slide-1" class="slide">                                
-                                        <div class="slider-img">
-                                           <a href="preview.html"><img src="../images/slide-1-image.png" alt="learn more" /></a>                                     
-                                        </div>
+                         <div class="">                        
+                             <div id="">
+                                <div id="">
 
-                                        <div class="slider-text">
-                                         <h1>Clearance<br><span>SALE</span></h1>
-                                         <h2>UPTo 20% OFF</h2>
-                                             <div class="features_list">
-                                                 <h4>Get to Know More About Our Memorable Services Lorem Ipsum is simply dummy text</h4>                                       
-                                              </div>
-                                         <a href="preview.html" class="button">Shop Now</a>
-                                       </div>                          
-                                        <div class="clear"></div>             
-                                    </div>    
 
-                                        <div class="slide">
-                                            <div class="slider-text">
-                                         <h1>Clearance<br><span>SALE</span></h1>
-                                         <h2>UPTo 40% OFF</h2>
-                                       <div class="features_list">
-                                        <h4>Get to Know More About Our Memorable Services</h4>                                         
-                                        </div>
-                                         <a href="preview.html" class="button">Shop Now</a>
-                                       </div>       
-                                         <div class="slider-img">
-                                         <a href="preview.html"><img src="../images/slide-3-image.jpg" alt="learn more" /></a>
-                                      </div>                                                                         
-                                      <div class="clear"></div>             
-                                  </div>
+                                <div class="container">
+   <div id="content-slider">
+      <div id="slider">  <!-- Slider container -->
+         <div id="mask" align="center">  <!-- Mask -->
 
-                                  <div class="slide">                                       
-                                      <div class="slider-img">
-                                         <a href="preview.html"><img src="../images/slide-2-image.jpg" alt="learn more" /></a>
-                                      </div>
-                                      <div class="slider-text">
-                                         <h1>Clearance<br><span>SALE</span></h1>
-                                         <h2>UPTo 10% OFF</h2>
-                                       <div class="features_list">
-                                        <h4>Get to Know More About Our Memorable Services Lorem Ipsum is simply dummy text</h4>                                        
-                                        </div>
-                                         <a href="preview.html" class="button">Shop Now</a>
-                                       </div>   
-                                      <div class="clear"></div>             
-                                  </div>                                                
+         <ul >
+         @for($i=0;$i < 5;$i++)
+         @if($i==0)
+         <li id="first" class="firstanimation">  <!-- ID for tooltip and class for animation -->
+         @elseif($i==1)
+         <li id="second" class="secondanimation">
+         @elseif($i==2)
+         <li id="third" class="thirdanimation">
+         @elseif($i==3)
+         <li id="fourth" class="fourthanimation">
+         @elseif($i==4)
+         <li id="fifth" class="fifthanimation">
+         
+         @endif
+         <a href="#"> <img src="images/feature-pic4.jpg" width="380" height="320" alt="Cougar"/> </a>
+         <div class="tooltip"> <h1></h1> </div>
+         </li>
+         @endfor
+
+
+         </ul>
+
+         </div>  <!-- End Mask -->
+         <div class="progress-bar"></div>  <!-- Progress Bar -->
+      </div>  <!-- End Slider Container -->
+   </div>
+</div>
+                                  
+                                
+                                                                                  
                              </div>     
                         </div>
                      <div class="clear"></div>                         
