@@ -26,16 +26,20 @@ class ShopController extends Controller
     {
         $categories = Category::all();
         
-        return view('shop.index',compact('categories'));
+        return view('shop.tmpindex',compact('categories'));
     }
 
     public function category_index($id)
     {
-        return view('shop.index');
+        $categories = Category::all();
+        $n_product  = Product::WHERE('cat_id',$id)->take(3)->orderBy('id', 'desc')->get();
+        $f_product  = Product::WHERE('cat_id',$id && 'featured',1)->take(3)->orderBy('id', 'desc')->get();
+        return view('shop.index',compact('categories','n_product','f_product'));
     }
     
     public function category_all($id)
     {
+        $categories = Category::all();
         return view('shop.all');
     }
 

@@ -22,7 +22,7 @@
          <li id="fifth" class="fifthanimation">
          
          @endif
-         <a href="#"> <img src="images/feature-pic4.jpg" width="380" height="320" alt="Cougar"/> </a>
+         <a href="#"> <img src="../images/feature-pic4.jpg" width="380" height="320" alt="Cougar"/> </a>
          <div class="tooltip"> <h1></h1> </div>
          </li>
          @endfor

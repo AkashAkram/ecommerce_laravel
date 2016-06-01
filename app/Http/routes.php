@@ -12,6 +12,21 @@
 */
 
 Route::get('/', 'ShopController@index');
+Route::get('/category_id/{id}', 'ShopController@category_index');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Route::auth();
 
