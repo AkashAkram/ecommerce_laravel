@@ -13,7 +13,7 @@
 
 
                     <div class="section group">
-                        @for($i=0;$i < 4;$i++)
+                        @for($i=0;$i < 3;$i++)
                             <div class="grid_1_of_4 images_1_of_4 float_left">
                                     <a href="preview.html"><img src="../images/feature-pic1.jpg" alt="" /></a>
                                     <h2>Lorem Ipsum is simply </h2>

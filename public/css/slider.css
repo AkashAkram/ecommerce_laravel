@@ -53,6 +53,7 @@ div {
 }
 
 #slider li {
+   left: 60px;
    width: 680px;  /* Width Image */
    height: 320px; /* Height Image */
    position: absolute;
@@ -64,23 +65,23 @@ div {
 
 
 #slider li.firstanimation {
-   animation: cycle 25s linear infinite;
+   animation: cycle 25s cubic-bezier(.6,-0.28,.74,.05) infinite;
 }
 
 #slider li.secondanimation {
-   animation: cycletwo 25s linear infinite;
+   animation: cycletwo 25s cubic-bezier(.6,-0.28,.74,.05) infinite;
 }
 
 #slider li.thirdanimation {
-   animation: cyclethree 25s linear infinite;
+   animation: cyclethree 25s cubic-bezier(.6,-0.28,.74,.05) infinite;
 }
 
 #slider li.fourthanimation {
-   animation: cyclefour 25s linear infinite;
+   animation: cyclefour 25s cubic-bezier(.6,-0.28,.74,.05) infinite;
 }
 
 #slider li.fifthanimation {
-   animation: cyclefive 25s linear infinite;
+   animation: cyclefive 25s cubic-bezier(.6,-0.28,.74,.05) infinite;
 }
 
 
@@ -155,7 +156,7 @@ div {
    width: 0;
    height: 2px;
    background: red;
-   animation: fullexpand 30s ease-out infinite;
+   animation: fullexpand 25s ease-out infinite;
 }
 
 

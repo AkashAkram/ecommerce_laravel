@@ -8,7 +8,7 @@
 		
 		    <div class="header_bottom_right">                   
                                                <!-- Slider -->
-              @include('includes.slider')
+              @include('includes.tmpslider')
                         <br>
               @include('includes.tmpnew')
               @include('includes.tmpfeatured')
