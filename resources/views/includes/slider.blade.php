@@ -1,6 +1,5 @@
                                                  
 
-                                <div class="container" align="center">
    <div id="content-slider">
       <div id="slider" align="center">  <!-- Slider container -->
          <div id="mask">  <!-- Mask -->
@@ -41,10 +40,9 @@
          </ul>
 
          </div>  <!-- End Mask -->
-         <div class="progress-bar"></div>  <!-- Progress Bar -->
+         <div class="akash-progress-bar"></div>  <!-- Progress Bar -->
       </div>  <!-- End Slider Container -->
    </div>
-</div>
                                   
          
                      <div class="clear"></div>                         

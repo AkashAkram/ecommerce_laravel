@@ -1,22 +1,23 @@
 @extends('layouts.shop')
 
 @section('title')
-	Product Name
+  {{$category_tree[0]->category}}
 @endsection
 
 @section('content')
-		
-		    <div class="header_bottom_right">                   
-                                               <!-- Slider -->
+    
+              @foreach($category_tree as $tree)
+                  <span><a href="../category_id/{{ $tree->id}}">{{ $tree->category }}</a> \ </span>
+              @endforeach                    <!-- Slider -->
+
               @include('includes.slider')
-              <br>
+                        <br>
               @include('includes.new')
               @include('includes.featured')
 
-        </div>
 
         <div class="clear"></div>
 
-
+        
 
 @endsection

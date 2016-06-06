@@ -32,9 +32,25 @@ class ShopController extends Controller
     public function category_index($id)
     {
         $categories = Category::all();
-        $n_product  = Product::WHERE('cat_id',$id)->take(3)->orderBy('id', 'desc')->get();
-        $f_product  = Product::WHERE('cat_id',$id && 'featured',1)->take(3)->orderBy('id', 'desc')->get();
-        return view('shop.index',compact('categories','n_product','f_product'));
+        $n_product  = Product::WHERE('cat_id',$id)->orderBy('id', 'desc')->get();
+        $f_product  = Product::WHERE('cat_id',$id && 'featured',1)->orderBy('id', 'desc')->get();
+
+
+        //$base_cat   = Category::find($id);
+        //var_dump($base_cat->parent_id);
+
+        $i=0;
+        do{
+            $base_cat   = Category::find($id);
+            $cat_tree[$i]=$base_cat;
+            $id = $base_cat->parent_id;
+            $i++;
+        }while ( $id != '0');
+
+        $category_tree = array_reverse($cat_tree);
+
+
+        return view('shop.index',compact('categories','n_product','f_product','category_tree'));
     }
     
     public function category_all($id)

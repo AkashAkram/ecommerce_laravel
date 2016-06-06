@@ -1,7 +1,7 @@
 
 
 
- <div class="content_top">
+                    <div class="content_top">
                         <div class="heading">
                             <h3>New Products</h3>
                         </div>
@@ -12,14 +12,16 @@
                     </div>
 
 
-                    <div class="section group">
-                        @for($i=0;$i < 3;$i++)
-                            <div class="grid_1_of_4 images_1_of_4 float_left">
-                                    <a href="preview.html"><img src="../images/feature-pic1.jpg" alt="" /></a>
-                                    <h2>Lorem Ipsum is simply </h2>
+                    <div class="row panel-wrap" align="center">
+                        @for($i=0;$i < 8;$i++)
+                            <div class="panel-grid">
+                                    <a href="preview.html"><img src="../images/new-pic1.jpg" alt="" /></a>
+                                    <div class="panel-grid-title">
+                                        <a href="">Lorem Ipsum is simply</a>
+                                    </div>
                                         <div class="price-details">
                                             <div class="price-number">
-                                                <p><span class="rupees">$620.87</span></p>
+                                                <span class="rupees">$94.65</span>
                                             </div>
                                             <div class="add-cart">                              
                                                 <h4><a href="preview.html">Add to Cart</a></h4>    

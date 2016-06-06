@@ -29,10 +29,14 @@
                     <a href="../">Amar E-Commerce Site</a>
                 </div>
                 <div class="cart">
-                   <p>Welcome to our Online Store! <span>Cart:</span><div id="dd" class="wrapper-dropdown-2"> 0 item(s) - $0.00
-                    <ul class="dropdown">
-                            <li>you have no items in your Shopping cart</li>
+                   <ul class="base">
+                       <li class="baselist">
+                           <p>Welcome to our Online Store! <span>Cart:</span><div id="dd" class="wrapper-dropdown-2"> 0 item(s) - $0.00
+                    <ul class="sub1">
+                            <li class="sublist1">you have no items in your Shopping cart</li>
                     </ul></div></p>
+                       </li>
+                   </ul>
                 </div>
                 <script type="text/javascript">
                     function DropDown(el) {

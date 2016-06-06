@@ -6,14 +6,13 @@
 
 @section('content')
 		
-		    <div class="header_bottom_right">                   
+		                    
                                                <!-- Slider -->
               @include('includes.tmpslider')
                         <br>
               @include('includes.tmpnew')
               @include('includes.tmpfeatured')
 
-        </div>
 
         <div class="clear"></div>
 

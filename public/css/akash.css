@@ -1,13 +1,79 @@
-li.baselist{
-   position: relative;
+
+
+
+
+/* panel-grid-grid */
+.panel-wrap{
+	padding-left: 16px;
+
 }
-li.sublist1{
-   margin-left: 20px;
-   
+.panel-grid-title{
+
+}
+.panel-grid {
+	margin-left: 0;
+	margin-right: 1.4%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background-color: transparent;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+          box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+  width: 23.5%;
+  float: left;
+  padding: 5px;
+  
+}
+.panel-grid-body {
+  padding: 15px;
+
+}
+.panel-grid-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.panel-grid-heading > .dropdown .dropdown-toggle {
+  color: inherit;
+}
+.panel-grid-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: inherit;
+}
+.panel-grid-title > a,
+.panel-grid-title > small,
+.panel-grid-title > .small,
+.panel-grid-title > small > a,
+.panel-grid-title > .small > a {
+  color: inherit;
+}
+.panel-grid-footer {
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
-li.baselist:hover > li.sublist1{
-   margin-left: 20px;
-   display: block;
-   position: relative;
+
+
+
+/*   Category Dropdown list  */
+ul.base a{
+  list-style-type: none;
+}
+
+li.sublist1{
+    display: none;
+}
+
+li.baselist:hover li.sublist1{
+    display: block;
+}
+
+li.sublist1 a{
+  color: blue;
 }

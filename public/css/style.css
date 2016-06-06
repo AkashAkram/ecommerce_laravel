@@ -44,7 +44,7 @@ body {
 	background: #FFF;
 }
 .headertop_desc{
-	padding:20px 0;
+	padding:10px 0;
 	border-bottom:1px solid #EEE;
 }
 .call{
@@ -84,7 +84,7 @@ body {
 	color:#E4292F;
 }
 .header_top {
-	padding: 20px 0;
+	padding: 1px 0;
 }
 .logo {
 	float: left;
@@ -374,8 +374,8 @@ body {
 	float: left;
 	padding-top: 5px;
 }
-.price-details p span.rupees{
-	font-size:1.6em;
+.price-details span.rupees{
+	font-size:18px;
 	font-family: 'ambleregular';
 	color:#383838;
 }
