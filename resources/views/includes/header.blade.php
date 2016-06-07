@@ -87,7 +87,11 @@
                          
                     </ul>
                 </div>
-                <div class="search_box"></div>
+                <div class="search_box">
+                        <form>
+                            <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
+                        </form>
+                    </div>
                 <div class="clear"></div>
             </div>
 
