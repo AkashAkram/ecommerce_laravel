@@ -2,8 +2,12 @@
             <div class="headertop_desc">
 
                 <div class="call">
-                    <p><span>Need help?</span> call us <span class="number">1-22-3456789</span></span></p> 
+                    <p>
+                    <span>Need help?</span> call us <span class="number">1-22-3456789</span>
+                    </span>
+                    </p> 
                 </div>
+        
 
 
 
@@ -29,14 +33,13 @@
                     <a href="../">Amar E-Commerce Site</a>
                 </div>
                 <div class="cart">
-                   <ul class="base">
-                       <li class="baselist">
-                           <p>Welcome to our Online Store! <span>Cart:</span><div id="dd" class="wrapper-dropdown-2"> 0 item(s) - $0.00
-                    <ul class="sub1">
-                            <li class="sublist1">you have no items in your Shopping cart</li>
-                    </ul></div></p>
-                       </li>
-                   </ul>
+        
+                       <p>Welcome to our Online Store! <span>Cart:</span>
+                        <div id="dd" class="wrapper-dropdown-2"> 
+                            0 item(s) - $0.00
+                        </div>
+                       </p>
+                
                 </div>
                 <script type="text/javascript">
                     function DropDown(el) {
@@ -68,25 +71,24 @@
                 </script>
             <div class="clear"></div>
 
+
             </div>
 
 
 
             <div class="header_bottom margin-bottom-10">
-                    <div class="menu">
-                        <ul>
-                            <li class="active"><a href="../">Home</a></li>
-                            <li><a href="">About</a></li>
-                            <li><a href="">Delivery</a></li>
-                            <li><a href="">News</a></li>
-                            <li><a href="">Contact</a></li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                    <div class="search_box">
-                        <form>
-                            <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
-                        </form>
-                    </div>
-                    <div class="clear"></div>
-            </div>  
+                <div class="menu">
+                    <ul>
+                        <li class="active"><a href="../">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Delivery</a></li>
+                        <li><a href="">News</a></li>
+                        <li><a href="">Contact</a></li>
+                         
+                    </ul>
+                </div>
+                <div class="search_box"></div>
+                <div class="clear"></div>
+            </div>
+
+        

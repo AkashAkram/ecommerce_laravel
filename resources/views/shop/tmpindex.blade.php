@@ -1,12 +1,15 @@
 @extends('layouts.shop')
 
 @section('title')
-	Category Name
+	Home
 @endsection
 
 @section('content')
 		
-		                    
+		       <div class="content_top">
+		       	 	<span><a href="../">Home</a> \ </span>
+		       </div>      
+		       <div class="clear"></div>      
                                                <!-- Slider -->
               @include('includes.tmpslider')
                         <br>

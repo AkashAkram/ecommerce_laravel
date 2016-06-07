@@ -1,7 +1,4 @@
-
-
-
-                     <div class="content_top">
+                    <div class="content_top">
                         <div class="heading">
                             <h3>Featured Products</h3>
                         </div>
@@ -12,20 +9,23 @@
                     </div>
 
 
-                    <div class="panel-wrap row" align="center">
-
-                        @foreach($f_product as $f)
-                            <div class="panel-grid">
-                                    <a href=""><img src="../images/{{ $f->default_image }}" alt="" />
-                                    {{ substr($f->product_name,0,50) }}...
-                                    </a>
+                    <div class="row panel-wrap">
+                        @foreach($f_product as $n)
+                            <div class="panel-grid" align="center">
                                     
+                                    <div class="panel-grid-title">
+                                        <a href="../product_id/{{$n->id}}"><img src="../images/{{ $n->default_image }}" alt="" />
+                                    {{ substr($n->product_name,0,20) }}...
+                                        </a>
+                                    </div>
                                         <div class="price-details">
-                                            <div class="price-number">
-                                                <span class="rupees">${{ $f->price }}</span>
+                                            
+                                            <div class="rupees">
+                                            ${{ $n->price }}
                                             </div>
+                                        
                                             <div class="add-cart">                              
-                                                <h4><a href="preview.html">Add to Cart</a></h4>    
+                                                <h4><a href="../product_id/{{$n->id}}">See Details</a></h4>    
                                             </div>
 
                                             <div class="clear"></div>
@@ -34,7 +34,3 @@
                             </div>
                         @endforeach
                     </div>
-
-
-
-
