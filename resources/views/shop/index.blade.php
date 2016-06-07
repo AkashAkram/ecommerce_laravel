@@ -1,7 +1,7 @@
 @extends('layouts.shop')
 
 @section('title')
-  {{$category_tree[0]->category}}
+  {{$category_tree[$len]->category}}
 @endsection
 
 @section('content')

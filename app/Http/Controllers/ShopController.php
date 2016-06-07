@@ -48,9 +48,9 @@ class ShopController extends Controller
         }while ( $id != '0');
 
         $category_tree = array_reverse($cat_tree);
+        $len = count($category_tree)-1;
 
-
-        return view('shop.index',compact('categories','n_product','f_product','category_tree'));
+        return view('shop.index',compact('categories','n_product','f_product','category_tree','len'));
     }
     
     public function category_all($id)
