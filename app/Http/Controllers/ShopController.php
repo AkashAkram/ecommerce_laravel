@@ -34,8 +34,8 @@ class ShopController extends Controller
         $categories = Category::all();
         $n_product  = Product::WHERE('cat_id',$id)->orderBy('id', 'desc')->get();
         $f_product  = Product::WHERE('cat_id',$id && 'featured',1)->orderBy('id', 'desc')->get();
-
-
+        $sub = Category::where('parent_id',$id)->get();
+        //print_r($sub);
         //$base_cat   = Category::find($id);
         //var_dump($base_cat->parent_id);
 
@@ -50,7 +50,7 @@ class ShopController extends Controller
         $category_tree = array_reverse($cat_tree);
         $len = count($category_tree)-1;
 
-        return view('shop.index',compact('categories','n_product','f_product','category_tree','len'));
+        return view('shop.index',compact('categories','n_product','f_product','category_tree','len','sub'));
     }
     
     public function category_all($id)

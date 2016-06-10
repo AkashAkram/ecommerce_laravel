@@ -6,29 +6,23 @@
 
 @section('content')
 		
-				<div class="col-md-3">
-                    @include('includes.category')
-                </div>
+				
                        
-
-                <div class="col-md-9">
-                    
-                
-			       <div class="content_top">
-			       	 	<span><a href="../">Home</a> \ </span>
-			       </div>      
-			       <div class="clear"></div>      
+<div class="row">
+	
+                <div class="col-md-12">
+                                        
 	                                               <!-- Slider -->
 	              	@include('includes.tmpslider')
-	                        <br>
-	              	@include('includes.tmpnew')
-	              	@include('includes.tmpfeatured')
-
-
+	              		
 	        		<div class="clear"></div>
 
         		</div>
 
-        
+</div>
+
+		            @include('includes.tmpnew')
+	              	@include('includes.tmpfeatured')
+
 
 @endsection

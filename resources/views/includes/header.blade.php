@@ -30,7 +30,7 @@
 
             <div class="header_top">
                 <div class="logo">
-                    <a href="../">Amar E-Commerce Site</a>
+                    <a href="../">Electro-Mart</a>
                 </div>
                 <div class="cart">
                    <p>Welcome to our Online Store! <span>Cart:</span>
@@ -54,27 +54,33 @@
 
             <div class="header_bottom margin-bottom-10">
                 <div class="menu">
-                    <ul>
-                        <li><a class="active" href="../">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Delivery</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Contact</a></li>
-                         
+                    <ul class="mymenu">
+    
+                        @foreach($categories as $cat)
+                        @if( $cat->parent_id == 0 )
+                        <li><a class="" href="../category_id/{{ $cat->id }}">{{ $cat->category }}<b class="caret"></b></a>
+                        </li>
+                        @endif
+                        @endforeach
+                        <li>
+
                     </ul>
                 </div>
-                <div class="search_box">
+                            <div class="search_box">
                         <form>
-                            <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
+                            <input type="text" class="" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
                         </form>
                     </div>
+                        </li>
+                     
+                
                 <div class="clear"></div>
             </div>
 
             <script type="text/javascript">
                 $(document).ready(function(){
-                    $('a').click(function(){
-                        $('a').removeClass("active");
+                    $('.mymenu li a').click(function(){
+                        $('.mymenu li a').removeClass("active");
                         $(this).addClass("active");
                     });
                 });

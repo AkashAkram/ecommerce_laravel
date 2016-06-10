@@ -20,6 +20,7 @@
     <script type="text/javascript" src="../js/easing.js"></script>
     <script type="text/javascript" src="../js/easyResponsiveTabs.js"></script>
     <script type="text/javascript" src="../js/dropdown.js"></script>
+    <script type="text/javascript" src="../js/myslider.js"></script>
 
 
  
@@ -38,9 +39,9 @@
                     <div class="header">
                         @include('includes.header')
                     </div> 
-                    <div class="row">
+                    
                         @yield('content')
-                    </div>   
+                       
                 </div>
 
                    <div class="footer">

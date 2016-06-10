@@ -5,11 +5,17 @@
 @endsection
 
 @section('content')
+      <div class="row">
+        @if(count($sub)>0)
         <div class="col-md-3">
             @include('includes.category')
         </div>
-
+      @endif
+      @if(count($sub)>0)
         <div class="col-md-9">
+      @else
+        <div class="col-md-12">
+      @endif
           <div class="content_top">
             <span>
               <a href="../">Home</a> \ 
@@ -20,14 +26,15 @@
    
           </div>              
                 @include('includes.slider')
-                    <br>
-                @include('includes.new')
-                @include('includes.featured')
-             
+  
           <div class="clear"></div>
 
         </div>
-    			       
+
         
 
+      </div>
+                @include('includes.new')
+                      
+                @include('includes.featured')
 @endsection
