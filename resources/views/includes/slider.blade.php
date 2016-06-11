@@ -1,17 +1,19 @@
                                                  
   <!-- Slider container -->
-
+<div align="center">
+  
       <div align="center" style="width:100%; height:250px">
-  <img class="mySlides" src="../images/new-pic1.jpg" height="100%">
-  <img class="mySlides" src="../images/new-pic2.jpg" height="100%">
-  <img class="mySlides" src="../images/new-pic3.jpg" height="100%">
-  </div>
+        @for($i=0;$i < 4;$i++)
+        <img class="mySlides" src="../images/new-pic1.jpg" height="100%">
+        @endfor
+      </div>
 
 
 
          <div class="akash-progress-bar"></div>  <!-- Progress Bar -->
        <!-- End Slider Container -->
-                                  
+
+</div>                                  
          
                      <div class="clear"></div>                         
 

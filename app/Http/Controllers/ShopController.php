@@ -59,4 +59,16 @@ class ShopController extends Controller
         return view('shop.all');
     }
 
+    public function product($id)
+    {
+        $categories = Category::all();
+
+        return view('shop.product',compact('categories'));
+    }
+
+    
+    
+
+
+
 }

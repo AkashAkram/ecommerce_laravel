@@ -15,7 +15,7 @@
                     <div class="row panel-wrap">
                         @for($i=0;$i < 8;$i++)
                             <div class="panel-grid" align="center">
-                                    <a href="../product_id/"><img src="../images/new-pic1.jpg" alt="" /></a>
+                                    <a href="../product_id/1"><img src="../images/new-pic1.jpg" alt="" /></a>
                                     <div class="panel-grid-title">
                                         <a href="">Lorem Ipsum is simply</a>
                                     </div>

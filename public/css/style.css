@@ -866,25 +866,13 @@ body {
 	text-shadow: 0px 0px 1px #000;
     background: #292929;
 }
-.span_3_of_1 li a {
-	font-size:1em;
-	padding:8px 0 8px 20px;
-	color: #666;
-	display: block;
-	font-family: 'ambleregular';
-	background: url(../images/drop_arrow.png) no-repeat 0;
-	border-bottom:1px solid #F0F0F0;
-}
-.span_3_of_1 li a:hover {
-	background: url(../images/drop_arrow-hover.png) no-repeat 0;
-	color:#B81D22;
-}
-.span_3_of_2 .button {
+
+.button {
 	float: right;
 	margin-top:15px;
 	line-height:3em;
 }
-.span_3_of_2 .button a {
+.button a {
 	padding: 12px 20px;
 	font-size: 1em;
 	font-weight: bold;
@@ -901,7 +889,7 @@ body {
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
 }
-.span_3_of_2 .button a:hover {
+.button a:hover {
 	border: 1px solid #303030;
 	background: #525252;
 	text-decoration: none;
@@ -997,11 +985,11 @@ body {
 	width: 29.2%;
 	padding: 1.5%;
 }
-.span_1_of_3 img {
+.row img {
 	max-width: 100%;
 }
-.span_1_of_3  h3 {
-	color: #383838;
+.row  h3 {
+	color: #ffffff;
 	margin-bottom: 0.5em;
 	font-size: 1.5em;
 	line-height: 1.2;

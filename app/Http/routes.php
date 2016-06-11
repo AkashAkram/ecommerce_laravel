@@ -13,6 +13,7 @@
 
 Route::get('/', 'ShopController@index');
 Route::get('/category_id/{id}', 'ShopController@category_index');
+Route::get('/product_id/{id}', 'ShopController@product');
 
 
 
