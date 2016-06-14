@@ -25,7 +25,7 @@
                                                     Price: $94.99
                                                 </div>
                                                                     
-                                                <div class="add-cart"><h4><a href="../product_id/">See Details</a></h4></div>    
+                                                <div class="add-cart"><h4><a href="../product_id/1">See Details</a></h4></div>    
                                         
 
                                             

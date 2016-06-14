@@ -256,6 +256,7 @@ class ComposerStaticInitca3959106980d146577678cd95d2089c
         'CreateCategoriesTable' => __DIR__ . '/../..' . '/database/migrations/2016_05_31_130713_create_categories_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateProductsTable' => __DIR__ . '/../..' . '/database/migrations/2016_06_01_163658_create_products_table.php',
+        'CreateReviewsTable' => __DIR__ . '/../..' . '/database/migrations/2016_06_13_134120_create_reviews_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',

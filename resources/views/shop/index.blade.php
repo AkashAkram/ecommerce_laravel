@@ -14,7 +14,7 @@
       @if(count($sub)>0)
         <div class="col-md-9">
       @else
-        <div class="col-md-12">
+              <div class="col-md-12">
       @endif
           <div class="content_top">
             <span>

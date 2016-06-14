@@ -30,7 +30,7 @@
 
             <div class="header_top">
                 <div class="logo">
-                    <a href="../">Electro-Mart</a>
+                    <a href="../">Electro Mart</a>
                 </div>
                 <div class="cart">
                    <p>Welcome to our Online Store! <span>Cart:</span>

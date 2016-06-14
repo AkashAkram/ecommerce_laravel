@@ -12,8 +12,11 @@
 */
 
 Route::get('/', 'ShopController@index');
-Route::get('/category_id/{id}', 'ShopController@category_index');
-Route::get('/product_id/{id}', 'ShopController@product');
+Route::get('/category_id/{cat_id}', 'ShopController@category_index');
+Route::get('/product_id/{pro_id}', 'ShopController@product');
+Route::get('/all_in_category/{Cat_id}', 'ShopController@all_in_cat');
+
+Route::post('/product_id/{pro_id}/review', 'ShopController@review');
 
 
 

@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
-<!DOCTYPE HTML>
 <head>
-<title>@yield('title') :: E-Commerce Site</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>@yield('title') :: Electro Mart</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <link href="../csss/global.css" rel="stylesheet" media="all">
     <link href="../css/easy-responsive-tabs.css" rel="stylesheet" type="text/css" media="all"/>
@@ -13,7 +13,7 @@
     <link href="../css/akash.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 
-    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link href="../css/w3.css" rel="stylesheet" type="text/css" media="all">
 
     @yield('style')
 
@@ -25,8 +25,6 @@
     <script type="text/javascript" src="../js/myslider.js"></script>
 
     
-
-
 </head>
 
 <body>

@@ -1,41 +1,41 @@
 				
 
 
+				<div class="col-md-1"></div>
+				<div class="col-md-4 ">				
 
-					<div class="col-md-5 ">				
-
-						<div class="w3-content" style="max-width:1200px">
-						  <img class="mySlides" src="../images/productslide-1.jpg" style="width:100%">
-						  <img class="mySlides" src="../images/productslide-2.jpg" style="width:100%">
-						  <img class="mySlides" src="../images/productslide-3.jpg" style="width:100%">
-
+					<div class="w3-content" style="max-width:1200px">
+					@foreach($product_images as $img)
+						  <img class="mySlides" src="../images/{!! $img->image_name !!}" style="width:100%">
+					@endforeach
+						  
 						  <div class="w3-row-padding w3-section">
 							    <div class="w3-col s4">
-							      <img class="demo w3-border w3-hover-shadow" src="../images/productslide-1.jpg" style="width:100%" onclick="currentDiv(1)">
+							      <img class="demo w3-border w3-hover-shadow" src="../images/{!! $product_images[0]->image_name !!}" style="width:100%" onclick="currentDiv(1)">
 							    </div>
 							    <div class="w3-col s4">
-							      <img class="demo w3-border w3-hover-shadow" src="../images/productslide-2.jpg" style="width:100%" onclick="currentDiv(2)">
+							      <img class="demo w3-border w3-hover-shadow" src="../images/{!! $product_images[1]->image_name !!}" style="width:100%" onclick="currentDiv(2)">
 							    </div>
 							    <div class="w3-col s4">
-							      <img class="demo w3-border w3-hover-shadow" src="../images/productslide-3.jpg" style="width:100%" onclick="currentDiv(3)">
+							      <img class="demo w3-border w3-hover-shadow" src="../images/{!! $product_images[2]->image_name !!}" style="width:100%" onclick="currentDiv(3)">
 							    </div>
 						  </div>
-						</div>
-
-						  
 					</div>
 
+						  
+				</div>
 
 
 
 
 
-					<div class="col-md-7 ">
+
+					<div class="col-md-6 ">
 					
-						<h2>Lorem Ipsum  </h2>
+						<h2> {{ $product->product_name }}  </h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>					
 						<div class="price">
-							<p>Price: <span>$500</span></p>
+							<p>Price: <span>${{$product->price}}</span></p>
 						</div>
 						<div class="available">
 							<p>Available Options :</p>
@@ -82,7 +82,6 @@
 						 </div>
 
 					</div>
-
 
 
 			<div class="clear"></div>

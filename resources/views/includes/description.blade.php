@@ -2,51 +2,56 @@
 		<div class="product_desc">	
 			<div id="horizontalTab">
 				<ul class="resp-tabs-list">
-					<li>Product Details</li>
-					<li>product Tags</li>
+					<li>Description</li>
+					<li>Specification</li>
 					<li>Product Reviews</li>
 					<div class="clear"></div>
 				</ul>
 				<div class="resp-tabs-container">
 					<div class="product-desc">
-						<p>Lorem Ipsum is simply dummy text of the <span>printing and typesetting industry</span>. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <span>when an unknown printer took a galley of type and scrambled</span> it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span> It has survived not only five centuries</span>, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>					</div>
+					{!! $product->description !!}
+					</div>
 
 				 <div class="product-tags">
-						 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-					<h4>Add Your Tags:</h4>
-					<div class="input-box">
-						<input type="text" value="">
-					</div>
-					<div class="button"><span><a href="#">Add Tags</a></span></div>
+					{!! $product->product_spec !!}
 			    </div>	
 
 				<div class="review">
-					<h4>Lorem ipsum Review by <a href="#">Finibus Bonorum</a></h4>
+					<h4>Product Rating: </h4>
 					 <ul>
-					 	<li>Price :<a href="#"><img src="web/images/price-rating.png" alt="" /></a></li>
-					 	<li>Value :<a href="#"><img src="web/images/value-rating.png" alt="" /></a></li>
-					 	<li>Quality :<a href="#"><img src="web/images/quality-rating.png" alt="" /></a></li>
+					 	<li>Price :<a href="#"><img src="../images/price-rating.png" alt="" /></a></li>
+					 	<li>Value :<a href="#"><img src="../images/value-rating.png" alt="" /></a></li>
+					 	<li>Quality :<a href="#"><img src="../images/quality-rating.png" alt="" /></a></li>
 					 </ul>
-					 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+					 <br>
+					 <H4>User Reviews for this product: </H4><br><br>
+
+					 @foreach($reviews as $review)
+					 	<article>
+					 		<h2 class="red">{!! $review->nickname !!}</h2>
+					 		<h4>{!! $review->summary !!}</h4>
+					 		"{!! $review->details !!}"<br><br>
+					 	</article>
+					 @endforeach
+
 				  <div class="your-review">
 				  	 <h3>How Do You Rate This Product?</h3>
 				  	  <p>Write Your Own Review?</p>
-				  	  <form>
+				  	  <form action="../product_id/{!! $product->id !!}/review" method="post">
+				  	  <input type="hidden" name="_token" value="{{ csrf_token() }}">
 					    	<div>
 						    	<span><label>Nickname<span class="red">*</span></label></span>
-						    	<span><input type="text" value=""></span>
+						    	<span><input type="text" name="nickname"></span>
 						    </div>
-						    <div><span><label>Summary of Your Review<span class="red">*</span></label></span>
-						    	<span><input type="text" value=""></span>
+						    <div><span><label>Summary of Your Review<span class="red"></span></label></span>
+						    	<span><input type="text" name="summary"></span>
 						    </div>						
 						    <div>
 						    	<span><label>Review<span class="red">*</span></label></span>
-						    	<span><textarea> </textarea></span>
+						    	<span><textarea name="details"> </textarea></span>
 						    </div>
 						   <div>
-						   		<span><input type="submit" value="SUBMIT REVIEW"></span>
+						   		<span><input type="submit" name="submit" value="SUBMIT REVIEW"></span>
 						  </div>
 					    </form>
 				  	 </div>				

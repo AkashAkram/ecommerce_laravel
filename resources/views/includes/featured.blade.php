@@ -3,7 +3,7 @@
                             <h3>Featured Products</h3>
                         </div>
                         <div class="see">
-                            <p><a href="#">See all Products</a></p>
+                            <p><a href="../all_in_category/{!! $category_tree[$len]->id !!}">See all Products</a></p>
                         </div>
                         <div class="clear"></div>
                     </div>
