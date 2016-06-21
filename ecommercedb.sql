@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 06, 2016 at 07:53 AM
+-- Generation Time: Jun 14, 2016 at 10:08 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 7.0.5
 
@@ -71,7 +71,8 @@ INSERT INTO `categories` (`id`, `category`, `parent_id`, `created_at`, `updated_
 (31, 'PlayStation 4', 6, '2016-04-26 20:41:37', '2016-04-26 20:41:37'),
 (32, 'PlayStation 4 Accessories', 6, '2016-04-26 20:41:51', '2016-04-26 20:41:51'),
 (33, 'PlayStation 4 Games', 6, '2016-04-26 20:42:00', '2016-04-26 20:42:00'),
-(34, 'PC Games', 6, '2016-04-26 20:42:12', '2016-04-26 20:42:12');
+(34, 'PC Games', 6, '2016-04-26 20:42:12', '2016-04-26 20:42:12'),
+(35, 'Action Games', 34, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -91,7 +92,8 @@ CREATE TABLE `migrations` (
 INSERT INTO `migrations` (`migration`, `batch`) VALUES
 ('2014_10_12_000000_create_users_table', 1),
 ('2014_10_12_100000_create_password_resets_table', 1),
-('2016_05_31_130713_create_categories_table', 1);
+('2016_05_31_130713_create_categories_table', 1),
+('2016_06_13_134120_create_reviews_table', 2);
 
 -- --------------------------------------------------------
 
@@ -206,20 +208,57 @@ INSERT INTO `products` (`id`, `product_name`, `default_image`, `product_qty`, `p
 CREATE TABLE `product_images` (
   `id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `image_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+  `image_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `product_images`
 --
 
-INSERT INTO `product_images` (`id`, `product_id`, `image_name`) VALUES
-(1, 1, 'new-pic1.jpg'),
-(2, 2, 'new-pic1.jpg'),
-(3, 1, 'new-pic1.jpg'),
-(4, 2, 'new-pic1.jpg'),
-(5, 5, 'new-pic1.jpg'),
-(6, 5, 'new-pic1.jpg');
+INSERT INTO `product_images` (`id`, `product_id`, `image_name`, `created_at`, `updated_at`) VALUES
+(1, 1, 'new-pic1.jpg', NULL, NULL),
+(2, 2, 'new-pic1.jpg', NULL, NULL),
+(4, 2, 'new-pic1.jpg', NULL, NULL),
+(5, 5, 'new-pic1.jpg', NULL, NULL),
+(6, 5, 'new-pic1.jpg', NULL, NULL),
+(7, 1, 'feature-pic1.jpg', NULL, NULL),
+(8, 1, 'feature-pic2.jpg', NULL, NULL),
+(9, 1, 'feature-pic3.jpg', NULL, NULL),
+(10, 1, 'feature-pic4.jpg', NULL, NULL),
+(11, 4, 'feature-pic1.jpg', NULL, NULL),
+(12, 4, 'feature-pic2.jpg', NULL, NULL),
+(13, 4, 'feature-pic3.jpg', NULL, NULL),
+(14, 4, 'feature-pic1.jpg', NULL, NULL),
+(15, 2, 'feature-pic1.jpg', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reviews`
+--
+
+CREATE TABLE `reviews` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `nickname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `summary` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `details` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `reviews`
+--
+
+INSERT INTO `reviews` (`id`, `product_id`, `nickname`, `summary`, `details`, `created_at`, `updated_at`) VALUES
+(1, 1, 'akash', 'sdsvr htht tynj yhtyhrty', 'swdwsdw sdsvr htht tynj yhtyhrtysdsvr htht tynj yhtyhrtysdsvr htht tynj yhtyhrtysdsvr htht tynj yhtyhrtysdsvr htht tynj yhtyhrtysdsvr htht tynj yhtyhrtysdsvr htht tynj yhtyhrtysdsvr htht tynj yhtyhrty', '2016-06-13 07:49:17', '2016-06-13 07:49:17'),
+(2, 1, 'Akram', 'jhrjh', ' yhjjhy', '2016-06-13 07:51:44', '2016-06-13 07:51:44'),
+(3, 1, 'uyjtj', 'yj', ' tyjt', '2016-06-13 07:52:44', '2016-06-13 07:52:44'),
+(4, 1, 'Akram', 'jhrjh', 'dndiwednjuhuih uhuihd uih eui unuh 8h899uh 89u 89u 89u 89u 89u 89u ', '2016-06-13 07:53:43', '2016-06-13 07:53:43'),
+(5, 4, 'Product 4', 'Summary', ' Product 4 review.  Product 4 review.  Product 4 review.  Product 4 review.  Product 4 review.  Product 4 review.  Product 4 review.  Product 4 review.  Product 4 review.  Product 4 review.  Product 4 review.  Product 4 review.  Product 4 review.  Product', '2016-06-13 08:03:15', '2016-06-13 08:03:15');
 
 -- --------------------------------------------------------
 
@@ -267,6 +306,12 @@ ALTER TABLE `product_images`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `reviews`
+--
+ALTER TABLE `reviews`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -281,7 +326,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 --
 -- AUTO_INCREMENT for table `products`
 --
@@ -291,7 +336,12 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `product_images`
 --
 ALTER TABLE `product_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+--
+-- AUTO_INCREMENT for table `reviews`
+--
+ALTER TABLE `reviews`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `users`
 --

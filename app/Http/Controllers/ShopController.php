@@ -68,7 +68,7 @@ class ShopController extends Controller
         $categories = Category::all();
         $product = Product::find($id);
         $product_images = Product_image::WHERE('product_id',$id)->get();
-        $reviews = Review::WHERE('product_id',$id)->get();
+        $reviews = Review::WHERE('product_id',$id)->orderBy('id', 'desc')->get();
         //echo $id;
        //print_r($product_images);
         return view('shop.product',compact('categories','product','product_images','reviews'));
